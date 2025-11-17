@@ -1,4 +1,5 @@
 import { COMMANDS_DATA } from "../data/commands.js"
+import downloadApp from "../data/download.js";
 
 export function renderHero() {
     const container = document.getElementById('hero-container');
@@ -32,10 +33,10 @@ export function renderHero() {
                         </div>
 
                         <div class="hero-buttons">
-                            <button class="btn btn-primary" onclick="downloadApp()">
+                            <button class="btn btn-primary" onclick="${downloadApp()}">
                                 <span>Download Now</span>
                             </button>
-                             <button class="btn btn-primary" onclick="downloadApp()">
+                             <button class="btn btn-primary" onclick="${downloadApp()}">
                                 <span>Update Now</span>
                             </button>
                         </div>

@@ -1,3 +1,5 @@
+import downloadApp from "../data/download.js";
+
 export function renderFooter() {
     const container = document.getElementById('footer-container');
     if (!container) return;
@@ -37,17 +39,17 @@ export function renderFooter() {
                 <p class="section-subtitle">Join thousands who type smarter with Refine Board</p>
                 
                 <div class="download-buttons">
-                    <button class="btn btn-primary btn-large" onclick="downloadApp()">
+                    <button class="btn btn-primary btn-large" onclick="${downloadApp}">
                         <span>Download Refine Board</span>
                     </button>
-                    <button class="btn btn-primary btn-large" onclick="downloadApp()">
+                    <button class="btn btn-primary btn-large" onclick="${downloadApp}">
                         <span>Update Refine Board</span>
                     </button>
                 </div>
                 
                 <div class="tech-specs">
                     <div class="spec">
-                        <strong>Size:</strong> &lt; 1MB
+                        <strong>Size: 3MB</strong>
                     </div>
                     <div class="spec">
                         <strong>Permissions:</strong> Only Vibrate and Internet
@@ -83,7 +85,6 @@ export function renderFooter() {
                         &copy; 2025 Refine Board. All rights reserved.
                         <div>Credits: 
                         <a href="https://github.com/rkkr/simple-keyboard">Simple Keyboard</a> ,
-                        <a href="https://github.com/openboard-team/openboard">Open Board</a>
                         </div>
                     </div>
                 </div>
@@ -93,4 +94,3 @@ export function renderFooter() {
 
     console.log('🔻 Footer sections rendered');
 }
-// module.exports = { renderFooter };

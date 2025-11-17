@@ -11,6 +11,7 @@ import { renderAPI } from './components/api.js';
 import { renderFooter } from './components/footer.js';
 import { initAnimations } from './components/animations.js';
 
+
 class App {
     constructor() {
         this.init();

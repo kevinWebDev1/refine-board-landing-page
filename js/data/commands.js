@@ -165,8 +165,11 @@ const stats = {
     toneOptions: categories.find(c => c.id === 'tone-spec')?.commands.length || 0
 };
 
+const apkDownloadUrl = "https://github.com/kevinWebDev1/refine-board-landing-page/releases/latest/download/refiner-keyboard.apk";
+
 export const COMMANDS_DATA = {
     categories,
-    stats
+    stats,
+    apkDownloadUrl
 };
 

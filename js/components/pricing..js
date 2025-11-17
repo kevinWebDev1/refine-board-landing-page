@@ -1,4 +1,5 @@
-import { COMMANDS_DATA } from "../data/commands.js"
+import { COMMANDS_DATA } from "../data/commands.js";
+import downloadApp from "../data/download.js";
 
 // Define plans dynamically
 const plans = [
@@ -49,7 +50,7 @@ export function renderPricing() {
                                     <span class="price-amount">₹0</span>
                                     <span class="price-period">${plan.period}</span>
                                 </div>
-                                <button class="btn btn-primary" onclick="downloadApp()">
+                                <button class="btn btn-primary" onclick="${downloadApp}">
                                     <span>Free Now</span>
                                 </button>
                             </div>

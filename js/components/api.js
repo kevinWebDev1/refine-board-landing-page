@@ -20,7 +20,7 @@ export function renderAPI() {
                                 </video>
                             </div>
                             </div>
-                            <button class="btn btn-primary btn-large" style="margin-top: 10px;">Get API Key</button>
+                            <a href="https://aistudio.google.com/api-keys" class="btn btn-primary btn-large" style="margin-top: 10px;">Get API Key</a>
                         
                     </div>
                     
