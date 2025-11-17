@@ -22,7 +22,7 @@ export function renderHero() {
                                 <span class="stat-label">AI Commands</span>
                             </div>
                             <div class="stat">
-                                <span class="stat-number">&lt;1MB</span>
+                                <span class="stat-number">3MB</span>
                                 <span class="stat-label">Lightweight</span>
                             </div>
                             <div class="stat">

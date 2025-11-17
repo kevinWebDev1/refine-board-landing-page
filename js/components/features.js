@@ -34,7 +34,7 @@ function renderFeatureCards() {
             icon: "fa-weight",
             color: "feat-lite",
             title: "Super Lite Weight",
-            description: "In just less than 3MB an 'AI Beast' Keyboard app under your fingertips!",
+            description: "In just 3MB an 'AI Beast' Keyboard app under your fingertips!",
             commands: ['3 MB Size']
         },
         {
