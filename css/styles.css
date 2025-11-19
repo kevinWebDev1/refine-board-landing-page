@@ -463,3 +463,12 @@ section {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     background-size: 1000px 100%;
 }
+
+@media (max-width: 768px) {
+    .btn-large {
+        width: 100%;          /* full width on mobile */
+        padding: 1rem 1.25rem; /* reduce thickness */
+        font-size: 1rem;       /* slightly smaller */
+        flex-wrap: nowrap;     /* keep text on one line unless needed */
+    }
+}

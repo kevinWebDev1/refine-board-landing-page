@@ -45,3 +45,35 @@
     color: var(--text-secondary);
     line-height: 1.6;
 }
+
+/* ---- Mobile Fix: Full-width api-info ---- */
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .api-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .api-info {
+        width: 100%;
+    }
+
+    /* Make API key section full width but less thick */
+    .api-key, 
+    .api-card.api-key { /* depends on your class naming */
+        width: 100%;
+        padding: 1.5rem !important; /* reduce thickness */
+    }
+
+    .api-key input {
+        width: 100%;
+        padding: 0.75rem 1rem; /* thinner input */
+        font-size: 1rem;
+    }
+
+    .api-key button {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+}
+
