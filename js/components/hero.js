@@ -33,10 +33,10 @@ export function renderHero() {
                         </div>
 
                         <div class="hero-buttons">
-                            <button class="btn btn-primary" onclick="${downloadApp()}">
+                            <button class="btn btn-primary" onclick="downloadApp()">
                                 <span>Download Now</span>
                             </button>
-                             <button class="btn btn-primary" onclick="${downloadApp()}">
+                             <button class="btn btn-primary" onclick="downloadApp()">
                                 <span>Update Now</span>
                             </button>
                         </div>

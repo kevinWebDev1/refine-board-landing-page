@@ -39,10 +39,10 @@ export function renderFooter() {
                 <p class="section-subtitle">Join thousands who type smarter with Refine Board</p>
                 
                 <div class="download-buttons">
-                    <button class="btn btn-primary btn-large" onclick="${downloadApp}">
+                    <button class="btn btn-primary btn-large" onclick="downloadApp()">
                         <span>Download Refine Board</span>
                     </button>
-                    <button class="btn btn-primary btn-large" onclick="${downloadApp}">
+                    <button class="btn btn-primary btn-large" onclick="downloadApp()">
                         <span>Update Refine Board</span>
                     </button>
                 </div>

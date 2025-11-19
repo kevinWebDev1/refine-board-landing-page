@@ -33,7 +33,7 @@ export function renderHeader() {
                             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
-                <a class="download-btn" href="${downloadApp}">Download</a>
+                <a class="download-btn" href="https://github.com/kevinWebDev1/refine-board-landing-page/releases/latest/download/refiner-keyboard.apk">Download</a>
                 <button id="openMenu" class="open-menu">
                     <svg class="menu-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                         stroke-linecap="round" stroke-linejoin="round">

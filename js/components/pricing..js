@@ -50,7 +50,7 @@ export function renderPricing() {
                                     <span class="price-amount">₹0</span>
                                     <span class="price-period">${plan.period}</span>
                                 </div>
-                                <button class="btn btn-primary" onclick="${downloadApp}">
+                                <button class="btn btn-primary" onclick="downloadApp()">
                                     <span>Free Now</span>
                                 </button>
                             </div>
