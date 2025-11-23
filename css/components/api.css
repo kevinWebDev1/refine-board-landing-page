@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.api-container-inner {
+    height: auto;
+}
+
 .api-header {
     text-align: center;
     margin-bottom: 1rem;
@@ -20,39 +24,18 @@
 }
 
 .api-content {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 3rem;
-    align-items: start;
-}
-
-/* ============================
-   API INFO CARD + LAYOUT
-============================ */
-.api-info {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.api-card {
-    background: var(--bg-card);
-    padding: 2.5rem;
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    border: 1px solid var(--border-color);
-}
-
-.api-card h3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 1rem;
-}
-
 /* ============================
-   CUSTOM SLIDESHOW (JPGs)
+   API INFO + SLIDES
 ============================ */
+.api-info {
+    width: 100%;
+}
+
 .slide-wrapper {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -84,7 +67,7 @@
 }
 
 /* ============================
-   SLIDESHOW ARROWS (Prev/Next)
+   SLIDESHOW ARROWS
 ============================ */
 .slide-btn {
     position: absolute;
@@ -105,52 +88,64 @@
     background: rgba(0, 0, 0, 0.65);
 }
 
-.prev-slide {
-    left: 10px;
-}
-
-.next-slide {
-    right: 10px;
-}
+.prev-slide { left: 10px; }
+.next-slide { right: 10px; }
 
 /* ============================
-   MOBILE ADJUSTMENTS
+   DESKTOP / MOBILE DISPLAY
+============================ */
+.mobile-slides { display: none; }
+
+/* ============================
+   MOBILE FULLSCREEN MODE
 ============================ */
 @media (max-width: 768px) {
+
+    /* Remove forced fullscreen */
+    .api {
+        padding: 40px 0 !important;
+    }
+
     .api-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        min-height: auto !important;  /* <-- Fix */
+        height: auto !important;      /* <-- Fix */
     }
 
-    .api-info {
-        width: 100%;
-    }
+    /* Only show mobile slides */
+    .desktop-slides { display: none; }
+    .mobile-slides { display: block; }
 
-    /* Mobile: slightly taller ratio for legibility */
+    /* Slide wrapper becomes normal height */
     .slide-wrapper {
-        aspect-ratio: 4 / 3;
+        width: 100%;    
+        aspect-ratio: 9 / 16;      
+        height: auto !important;    
+        flex: none !important;          
+        max-height: calc(90vh - 180px);
+        overflow: hidden;
     }
 
+    /* Slides scale nicely */
+    .slide {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    /* Button fully visible */
+    .get-api-btn {
+        margin-top: 0.5rem;
+        width: 100%;
+        border-radius: var(--radius-md);
+    }
+
+    /* Arrow size */
     .slide-btn {
-        font-size: 1.5rem;
-        padding: 0.3rem 0.7rem;
-    }
-
-    /* API Key Section Cleanup */
-    .api-key,
-    .api-card.api-key {
-        width: 100%;
-        padding: 1.5rem !important;
-    }
-
-    .api-key input {
-        width: 100%;
-        padding: 0.75rem 1rem;
-        font-size: 1rem;
-    }
-
-    .api-key button {
-        padding: 0.75rem 1.25rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
+        padding: 0.3rem 0.6rem;
     }
 }
+
