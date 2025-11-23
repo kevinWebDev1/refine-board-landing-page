@@ -7,7 +7,7 @@ export function renderAPI() {
             <div class="container api-container-inner">
 
                 <div class="api-header">
-                    <p class="api-subheading">Paste This API Key in Refine Board's to use AI</p>
+                    <p class="api-subheading">Paste This API Key</p>
                 </div>
 
                 <div class="api-content">
