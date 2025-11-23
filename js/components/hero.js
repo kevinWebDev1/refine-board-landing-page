@@ -61,14 +61,6 @@ export function renderHero() {
                                 Your browser does not support the video tag.
                                 </video>
 
-                                <!-- Optional: true image fallback if video fails to load -->
-                                <noscript>
-                                <img src="./assets/images/fallback.png" 
-                                    alt="Refine Board App Demo" 
-                                    class="mockup-fallback" />
-                                </noscript>
-
-
                                 <!-- Camera Notch -->
                                 <div class="camera-notch"></div>
                             </div>

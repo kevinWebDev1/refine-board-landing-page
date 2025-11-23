@@ -24,6 +24,7 @@ export function renderFeedback() {
     `;
 
     initTestimonialCarousel();
+    loadDownloadStats(); // Load real download count
     console.log('💬 Feedback section rendered');
 }
 
@@ -103,7 +104,7 @@ function renderTestimonials() {
 
 function renderFeedbackStats() {
     const stats = [
-        { number: "10,000+", label: "Active Users" },
+        { number: "4+", label: "Downloads", id: "downloads-stat" }, // Default fallback
         { number: "4.8/5", label: "Average Rating" },
         { number: COMMANDS_DATA.stats.total, label: "AI Commands" },
         { number: "99%", label: "Satisfaction Rate" }
@@ -113,12 +114,36 @@ function renderFeedbackStats() {
         <div class="stats-grid">
             ${stats.map(stat => `
                 <div class="stat-item">
-                    <div class="stat-number">${stat.number}</div>
+                    <div class="stat-number" id="${stat.id || ''}">${stat.number}</div>
                     <div class="stat-label">${stat.label}</div>
                 </div>
             `).join('')}
         </div>
     `;
+}
+
+// Load real GitHub download stats
+async function loadDownloadStats() {
+    try {
+        const response = await fetch('https://api.github.com/repos/kevinWebDev1/refine-board-landing-page/releases');
+        const releases = await response.json();
+        
+        let totalDownloads = 0;
+        releases.forEach(release => {
+            release.assets.forEach(asset => {
+                totalDownloads += asset.download_count;
+            });
+        });
+        
+        const downloadsElement = document.getElementById('downloads-stat');
+        if (downloadsElement) {
+            // Show real count with "+" for social proof
+            downloadsElement.textContent = totalDownloads + "+";
+        }
+    } catch (error) {
+        console.log('Failed to load GitHub stats, using default');
+        // Keep the default "4+" if API fails
+    }
 }
 
 function initTestimonialCarousel() {
