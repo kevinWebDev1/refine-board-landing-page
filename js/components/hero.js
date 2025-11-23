@@ -53,8 +53,7 @@ export function renderHero() {
                             <!-- Main Mockup (Focused, pronounced shadow) -->
                             <div class="main-mockup">
                                 <video autoplay loop muted playsinline
-                                    class="mockup-video"
-                                    poster="./assets/images/fallback.png">
+                                    class="mockup-video">
                                 <source src="./assets/videos/refine-video-mock.mp4" type="video/mp4">
                                 <source src="./assets/videos/refine-video-mock.webm" type="video/webm">
                                 <!-- Fallback for browsers that don’t support <video> -->
